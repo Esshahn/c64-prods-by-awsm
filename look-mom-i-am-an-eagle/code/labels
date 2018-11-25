@@ -1,0 +1,11 @@
+screenloc	= $798
+smooth	= $2
+wrapmessage	= $c06f
+nowrap	= $c08e	; ?
+message	= $c09f	; ?
+endscroll	= $c09e	; ?
+scroll	= $c062	; ?
+hold	= $c028
+interrupt2	= $c045	; ?
+interrupt1	= $c02b	; ?
+read	= $c07a	; ?
