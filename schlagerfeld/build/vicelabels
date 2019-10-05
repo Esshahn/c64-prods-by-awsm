@@ -1,0 +1,47 @@
+	screenloc	= $7c0
+	end	= $c145	; ?
+	tick	= $1acc
+	irq	= $c0a6	; ?
+	address_sprites	= $b00
+	smooth	= $12
+	play_sid	= $1003
+	wrapmessage	= $c3c9
+	main	= $c066	; unused
+	alien_groove	= $c107	; ?
+	address_sid	= $1000
+	nowrap	= $c3e8	; ?
+	scrolltemp	= $c45d	; ?
+	pra	= $dc00
+	check_keyboard	= $c421	; ?
+	prb	= $dc01
+	message	= $c14b
+	endscroll	= $c3f8	; ?
+	animb	= $c133	; ?
+	anima	= $c121	; ?
+	clear_screen	= $c3f9	; ?
+	scroll	= $c3bc	; ?
+	clear_loop	= $c401
+	alien_init	= $c0fc	; ?
+	groove	= $c112	; ?
+	init_sid	= $1000
+	theend	= $c45c	; unused
+	img	= $4800	; ?
+	tock	= $1acd
+	check_space	= $c42b	; unused
+	momo	= $c451	; ?
+	read	= $c3d4	; ?
+	petscii	= $c45e	; ?
+	sprite_pointer_2	= $2e
+	exit_to_basic	= $c438	; ?
+	sprite_pointer_3	= $2f
+	sprite_pointer_0	= $2c
+	sprite_pointer_1	= $2d
+	screen_ram	= $400
+	ddra	= $dc02
+	ddrb	= $dc03
+	init_scroll	= $c3b1	; ?
+	kopy	= $c462
+	effects	= $c43b	; ?
+
+  break .bp
+  

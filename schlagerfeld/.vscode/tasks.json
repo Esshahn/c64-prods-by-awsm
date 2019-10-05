@@ -1,0 +1,34 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C64 -> VICE",
+            "type": "shell",
+            "osx": {
+                "command": "acme -v4 -f cbm -r ../build/report.asm -l ../build/labels -o ../build/main.prg index.asm && exomizer sfx 0xc000 -n -t 64 -o ../build/main.prg ../build/main.prg && cat ../build/labels ../build/monitor_commands > ../build/vicelabels && /Applications/Vice/x64.app/Contents/MacOS/x64 -moncommands ../build/vicelabels ../build/main.prg 2> /dev/null",
+            },
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            },
+            "presentation": {
+                "clear": true
+            },
+            "options": {
+              "cwd": "${workspaceFolder}/code"
+            },
+            "problemMatcher": {
+                "owner": "acme",
+                "fileLocation": ["relative", "${workspaceFolder}"],
+                "pattern": {
+                    "regexp": "^(Error - File\\s+(.*), line (\\d+) (\\(Zone .*\\))?:\\s+(.*))$",
+                    "file": 2,
+                    "location": 3,
+                    "message": 1
+                }
+            }
+        }  
+    ]
+}
