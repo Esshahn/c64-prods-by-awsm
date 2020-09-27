@@ -1,0 +1,47 @@
+0 color0,2:color 5,1:graphic0,1:char,12,12,"done by i.s.c. 89"
+10 sprcolor10,9
+20 bload"balken/spr":bload"the outsider"
+21 color4,2:fory=1to50:next
+22 color4,16:fory=1to50:next
+23 color4,13:fory=1to50:next
+24 color4,12:fory=1to50:next
+25 color4,1:fory=1to50:next
+26 color0,16:fory=1to50:next
+27 color0,13:fory=1to50:next
+28 color0,12:fory=1to50:next
+29 color0,1:fory=1to50:next
+30 fort=1to8:spritet,1,8,0,0,1,1:next
+40 movspr1,24,208:movspr2,48,208:movspr3,72,208:movspr4,96,208:movspr5,320,208:movspr6,320-24,208:movspr7,320-48,208:movspr8,320-72,208
+70 fast:graphic1,1:poke2612,205:slow
+80 fort=1to60
+90 x=int(319*rnd(1)+1)
+100 y=int(109*rnd(1)+1)
+110 color1,15:draw1,x,y:next
+120 color1,2:char,0,15,"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+130 color1,8:char,0,16,"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+140 color1,4:char,0,17,"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+150 color1,15:char,0,18,"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+160 color1,7:char,0,19,"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+170 color1,8:circle1,7,10,10:paint1,7,10:color1,7
+190 draw1,5,75to145,20to155,20to100,45to100,90to120,100to110,100to90,90to90,50to5,80to5,75:paint1,6,76
+200 draw1,170,20to110,48to110,85to140,100to180,100to210,85to210,50to180,65to180,75to200,65to200,80to180,90to140,90to120,80to120,55to170,30to195,50to205,45
+210 draw1to170,20:paint1,173,23
+220 draw1,185,20to220,45to220,90to195,100to290,100to315,50to185,20
+230 draw1,225,37to230,40to230,90to225,93to280,93to300,54to225,37:paint1,223,35
+240 color1,11:char1,13,21,"the goblin-duo"
+250 color1,3:char1,7,23,"the masters on the pc-128."
+260 fort=1to4:movsprt,90#1:next
+261 fort=5to8:movsprt,270#1:next
+270 ?:?:?
+271 color5,2:print"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+272 color5,8:print"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+273 color5,4:print"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+274 color5,15:print"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+275 color5,7:print"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+280 color5,11:?:print"             the goblin-duo"
+290 color5,3:?:print"       the masters on the pc-128."
+300 sys4864
+810 a=5
+820 a=a+1:ifa>25then900:else:graphic2,0,a:goto820
+900 a=a-1:ifa<7then820:else:graphic2,0,a:goto900
+
