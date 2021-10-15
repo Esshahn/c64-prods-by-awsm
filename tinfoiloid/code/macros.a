@@ -1,0 +1,39 @@
+!macro stack  {
+                pha
+                tya 
+                pha 
+                txa 
+                pha 
+}
+
+!macro unstack  {
+                pla
+                tax 
+                pla 
+                tay 
+                pla 
+}
+
+
+!macro wait .x {
+                +stack
+                ldx #.x
+--              ldy #$ff
+-               dey 
+                nop
+                nop
+                nop
+                nop
+                bne -
+                dex 
+                bne -- 
+                +unstack
+}
+
+!macro joy1_fire {
+macro_joy:
+                lda $dc00                                       ; get joy 1 
+                and #%00011111                                  ; use only bits 0-4
+                cmp #$f                                         ; fire
+                bne macro_joy
+}
